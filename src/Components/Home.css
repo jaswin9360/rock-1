@@ -1,0 +1,25 @@
+body{
+    background: #000;
+}
+
+
+h1{
+    color: #c78f27;
+    font-size: 2em;
+    text-align: center;
+    margin: 80px;
+   border: #f8f8f8 solid 2px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #000;
+    box-shadow: 0 0 20px #c78f27, 0 0 40px #c78f27, 0 0 60px #c78f27, 0 0 80px #c78f27;
+}
+.image-container{
+ color: #f8f8f8;
+ border: #f8f8f8 solid 5px;
+margin: 100px;
+}
+.gta{
+    position: relative;
+    width: 600px;
+    height: auto}

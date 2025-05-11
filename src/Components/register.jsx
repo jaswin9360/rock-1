@@ -45,7 +45,7 @@ import "./Login.css"
               } else {
                 setError('');
                 alert('Form submitted: ' + username);
-               return window.location.href="/login"}}}  >Login</button>
+               return window.location.href="/register/login"}}}  >Login</button>
         </form>
         
         </center>

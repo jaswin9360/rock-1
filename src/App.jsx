@@ -4,6 +4,7 @@ import Main from './Components/Main'
 import Login from './Components/Login'
 import Home from './Components/Home'
 import Register from './Components/register'
+import Download from './Components/Download'
 
 // import axios from 'axios'
 // import Home from './Components/Home'
@@ -17,6 +18,7 @@ function App () {
             <Route path="/" element={<Main/>} />
             <Route path="/register/login" element={<Login/>} />
             <Route path="register/login/home" element={<Home/>} />
+            <Route path="register/login/home/download" element={<Download/>} />
             <Route path="/register" element={<Register/>} />
             </Routes>
         </BrowserRouter>

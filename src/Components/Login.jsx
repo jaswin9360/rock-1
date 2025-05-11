@@ -96,7 +96,7 @@ try {
               }
               else if (username===code[0].username) {
                 alert("wait for 5 seconds")
-               return setTimeout(()=>{ window.location.href="/home"},5000)
+               return setTimeout(()=>{ window.location.href="/register/login/home"},5000)
                }
                else{
                 setError("login failed incorrect username or password ")

@@ -1,14 +1,14 @@
-.img{
+.img2{
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
     width: 100%;
-    padding: 10px;
-    max-width: 100%;
+    padding-top: 10px;
+    max-width: 500%;
     height: auto;
-        object-fit: cover; 
-        opacity: 0.8;
+    object-fit: cover; 
+    opacity: 0.8;
 }
 
 .main{
@@ -30,20 +30,32 @@
     background-color: black;
     color: white;
   }
+   .agree{
+    color: #080808;
+  }
+  #checkbox{
+   position: relative;
+   top: 2px;
+  }
+  .handlecheck{
+    position: relative;
+    top: 20px;
+   right: 150px;
+  }
 
   .Input{
     background: #fffdfd;
     background-image: url("https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg");
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
     margin: auto;
-    width: 60%;
-    padding: 10px;
+    width: auto;
+    padding: 20px;
+    height: auto;
+    width: auto;
     border: #f8f8f8 solid 5px;
-    height: 50px;
-    width: 550px;
-    gap: 200px;
+    
   }
   .continue{
     cursor: pointer;
@@ -51,7 +63,7 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    width: 10%;
+    width: auto;
     padding: 10px;
   }
   .continue:hover {
@@ -60,53 +72,27 @@
   }
   .terms{
    color: rgb(255, 255, 255);
-   position: relative;
-   left: 150px;
-  }
-  .agree{
-    position: relative;
-    left: 600px;
-    top: 50px;
-    color: rgb(0, 0, 0);
-  }
-  .handlecheck{
-  position: relative;
-  top: 25px;
+ 
   }
   .handlecheck:hover{
     cursor: pointer;
     background-color: rgb(53, 128, 185);
     color: #f8f8f8;
   }
-  #checkbox{
-    position: relative;
-    bottom: 15px;
-    left: 80px;
-  }
-  .para{
-    position: relative;
-    left: 200px;
-  }
+  
   .head{
     color: #f8f8f8;
-    position: relative;
-    left: 350px;
+  
   }
   .head2{
-    display: flex;
     color: #f8f8f8;
-    position: relative;
-    left: 300px;
+    
   }
   .head3{
-    display: flex;
     color: #f8f8f8;
-    position: relative;
-    left: 400px;
+   ;
   }
   .head4{
-    display: flex;
     color: #f8f8f8;
-    position: relative;
-    left: 400px;
+    
   }

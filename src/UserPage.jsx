@@ -50,7 +50,7 @@ function UserPage() {
         } else {
           alert("Access denied. Please wait for admin approval.");
         }
-      }, 100000)
+      }, 5000)
     } catch (err) {
       alert("Error checking permission.");
     }

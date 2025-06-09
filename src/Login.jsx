@@ -12,21 +12,7 @@ function Login() {
 
   const [username, setUsername] = React.useState("")
   const [password, setPassword] = React.useState("")
-  const [secondsLeft, setSecondsLeft] = useState(30);
   const [error, setError] = React.useState(false)
-
-  const [loading, setLoading] = useState(false);
-
-
-  useEffect(() => {
-    if (secondsLeft === 0) return;
-
-    const timer = setInterval(() => {
-      setSecondsLeft(prev => prev - 1);
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [secondsLeft]);
 
 
   const handleSubmit = async (e) => {
@@ -83,9 +69,6 @@ function Login() {
   return (
     <div>
       <h1>Login</h1>
-      <div>
-        <h2 className='second'>Time left: {secondsLeft} sec</h2>
-      </div>
       <center className='login'>
         <form onSubmit={handleSubmit}>
           <img className="img" src="https://cdn-icons-png.flaticon.com/512/6681/6681204.png" alt="image" /><br />

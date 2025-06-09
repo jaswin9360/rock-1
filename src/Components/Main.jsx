@@ -1,6 +1,6 @@
 import React, { useState, createContext } from 'react'
 import { useNavigate } from "react-router-dom"
-import './main.css'
+import './Main.css'
 import { useEffect } from 'react'
 function Main() {
 

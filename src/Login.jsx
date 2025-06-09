@@ -9,7 +9,7 @@ function Login() {
 
   const [code, setCode] = useState("")
   const token = true
-
+  const [loading, setLoading] = useState(false);
   const [username, setUsername] = React.useState("")
   const [password, setPassword] = React.useState("")
   const [error, setError] = React.useState(false)
@@ -69,6 +69,8 @@ function Login() {
   return (
     <div>
       <h1>Login</h1>
+      <br />
+      <br />
       <center className='login'>
         <form onSubmit={handleSubmit}>
           <img className="img" src="https://cdn-icons-png.flaticon.com/512/6681/6681204.png" alt="image" /><br />
@@ -132,6 +134,7 @@ function Login() {
               }
               else if (code == 2) {
                 alert("wait for 5 seconds");
+                setLoading(true)
                 setTimeout(() => setLoading(true), 1000);
                 return setTimeout(() => window.location.href = "/home", 5000)
               }

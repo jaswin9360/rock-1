@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import LoadingSpinner from './loading /LoadingSpinner';
+import LoadingSpinner from './LoadingSpinner';
 
 function UserPage() {
   const navigate = useNavigate();

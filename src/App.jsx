@@ -1,14 +1,14 @@
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Main from './Components/Main'
-import Login from './Components/Login'
-import Home from './Components/Home'
-import Register from './Components/register'
-import Download from './Components/Download'
+import Main from './Main.copy'
+import Login from './Login'
+import Home from './Home'
+import Register from './register'
+import Download from './Download'
 import PrivateRoute from './PrivateRoute';
-import UpiSection from './Components/UpiSection'
-import UserPage from './Components/UserPage'
-import GamePage from './Components/GamePage'
+import UpiSection from './UpiSection'
+import UserPage from './UserPage'
+import GamePage from './GamePage'
 
 
 function App() {

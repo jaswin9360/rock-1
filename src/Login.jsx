@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import styles from './LoginModal.module.css';
 import axios from 'axios'
 import "./Login.css"
-import LoadingSpinner from './loading /LoadingSpinner';
+import LoadingSpinner from './LoadingSpinner';
 
 function Login() {
 

@@ -19,9 +19,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-
         <Route path="/" element={<Main />} />
-
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route

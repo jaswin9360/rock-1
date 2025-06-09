@@ -69,7 +69,7 @@ function Main() {
         </>}<br />
 
         {
-          check && <button className="main" onClick={() => window.location.href = "/register"}>Go On</button>
+          check && <button className="main" onClick={ window.location.href = "/register"}>Go On</button>
         }
 
       </div>

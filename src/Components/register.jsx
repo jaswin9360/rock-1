@@ -7,25 +7,28 @@ function Register() {
   const [username, setUsername] = React.useState("")
   const [password, setPassword] = React.useState("")
   const [error, setError] = React.useState('');
-  
+
 
   const handleSubmit = async (e) => {
 
     try {
       e.preventDefault()
-      const response = await axios.post("http://localhost:3009/register", { username, password })
+      const response = await axios.post("https://rocks-backend.onrender.com/register", { username, password })
       console.log(response.data)
     } catch (error) {
       console.error("Error logging in:", error)
     }
   }
 
-  const check =()=>{
-  if(checkbox.checked){
-    const   uname = "hello"
-    const upassword = password; 
+  const check = () => {
+    if (checkbox.checked) {
+      const uname = username
+      const upassword = password;
+      console.log(upassword)
+      localStorage.setItem("uname", uname)
+      localStorage.setItem("upassword", upassword)
+    }
   }
-}
   return (
     <div>
       <h1>Register</h1><br />
@@ -58,7 +61,9 @@ function Register() {
             } else {
               setError('');
               alert('Form submitted: ' + username);
-              return window.location.href = "/login"
+              setTimeout(() => {
+                return window.location.href = "/login"
+              }, 1500)
             }
           }}  >Login</button>
         </form>
@@ -67,5 +72,5 @@ function Register() {
     </div>
   )
 }
-  
+
 export default Register;

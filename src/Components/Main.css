@@ -1,98 +1,108 @@
-.img2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 100%;
-    padding-top: 10px;
-    max-width: 500%;
-    height: auto;
-    object-fit: cover; 
-    opacity: 0.8;
+.img2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  padding-top: 10px;
+  max-width: 500%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.8;
 }
 
-.main{
-    background-color: rgb(58, 104, 230);
-    color: rgb(255, 255, 255);
-    height: 40px;
-    width: 60px;
-    border-radius: 10px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 60%;
-    padding: 10px;
+.main {
+  background-color: rgb(58, 104, 230);
+  color: rgb(255, 255, 255);
+  height: 40px;
+  width: 60px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
 }
 
 .main:hover {
-    background-color: black;
-    color: white;
-  }
-   .agree{
-    color: #080808;
-  }
-  #checkbox{
-   position: relative;
-   top: 2px;
-  }
-  .handlecheck{
-    position: relative;
-    top: 20px;
-   right: 150px;
-  }
+  background-color: black;
+  color: white;
+}
 
-  .Input{
-    background: #fffdfd;
-    background-image: url("https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg");
-   display: flex;
-   justify-content: center;
-   align-items: center;
-    margin: auto;
-    width: auto;
-    padding: 20px;
-    height: auto;
-    width: auto;
-    border: #f8f8f8 solid 5px;
-    
-  }
-  .continue{
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: auto;
-    padding: 10px;
-  }
-  .continue:hover {
-    background-color: rgb(53, 128, 185);
-    color: white;
-  }
-  .terms{
-   color: rgb(255, 255, 255);
- 
-  }
-  .handlecheck:hover{
-    cursor: pointer;
-    background-color: rgb(53, 128, 185);
-    color: #f8f8f8;
-  }
-  
-  .head{
-    color: #f8f8f8;
-  
-  }
-  .head2{
-    color: #f8f8f8;
-    
-  }
-  .head3{
-    color: #f8f8f8;
-   ;
-  }
-  .head4{
-    color: #f8f8f8;
-    
-  }
+.agree {
+  color: #080808;
+}
+
+#checkbox {
+  position: relative;
+  top: 2px;
+}
+
+.handlecheck {
+  position: relative;
+  top: 20px;
+  right: 150px;
+}
+
+.Input {
+  background: #fffdfd;
+  background-image: url("https://t3.ftcdn.net/jpg/03/55/60/70/360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: auto;
+  padding: 20px;
+  height: auto;
+  width: auto;
+  border: #f8f8f8 solid 5px;
+
+}
+
+.continue {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: auto;
+  padding: 10px;
+}
+
+.continue:hover {
+  background-color: rgb(53, 128, 185);
+  color: white;
+}
+
+.terms {
+  color: rgb(255, 255, 255);
+
+}
+
+.handlecheck:hover {
+  cursor: pointer;
+  background-color: rgb(53, 128, 185);
+  color: #f8f8f8;
+}
+
+.head {
+  color: #f8f8f8;
+
+}
+
+.head2 {
+  color: #f8f8f8;
+
+}
+
+.head3 {
+  color: #f8f8f8;
+  ;
+}
+
+.head4 {
+  color: #f8f8f8;
+
+}

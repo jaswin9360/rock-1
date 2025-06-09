@@ -32,8 +32,8 @@ button:hover {
 
 .code {
     color: #f8f8f8;
-position: relative;
-width: 10px;
+    position: relative;
+    width: 10px;
 }
 
 .img {
@@ -55,11 +55,13 @@ width: 10px;
     cursor: pointer;
     color: #358f35;
 }
-.fg{
-  position: relative;
-  right: 5px;
+
+.fg {
+    position: relative;
+    right: 5px;
 }
-.fp:hover{
+
+.fp:hover {
     color: #2b10c1;
     cursor: pointer;
 }

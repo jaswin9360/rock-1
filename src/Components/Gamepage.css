@@ -1,0 +1,101 @@
+.card {
+  width: 90%;
+  max-width: 360px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.card-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.card-title  {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #000000;
+}
+
+.card-sub {
+  font-size: 14px;
+  color: #666;
+  margin: 2px 0;
+}
+
+.card-rating {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.star {
+  color: gold;
+  font-size: 16px;
+}
+
+.rating-value {
+  font-weight: bold;
+  color: #333;
+}
+
+.rating-count {
+  font-size: 12px;
+  color: #888;
+}
+
+.card-price {
+  font-size: 16px;
+  color: green;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.download-button {
+  padding: 10px 18px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Responsive Styling */
+@media (max-width: 480px) {
+  .card {
+    padding: 16px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .download-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+}

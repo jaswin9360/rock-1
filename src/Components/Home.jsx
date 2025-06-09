@@ -1,12 +1,17 @@
-import React from 'react'
-import VideoPlayer from "react-video-js-player"
+import { useNavigate } from "react-router-dom"
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import "./Home.css"
 function Home() {
+  const [hideButton, setHideButton] = useState(() => {
+    return localStorage.getItem('isVerified') === 'true';
+  });
+
+  const navigate = useNavigate()
+  const name = localStorage.getItem("name")
 
   const [code, setCode] = useState([])
-  const [age, setAge] = useState(false)
+  const [age, setAge] = useState(null)
   const [bod, setBod] = useState("")
   const [year, setyear] = useState("")
   const [error, setError] = useState("")
@@ -14,10 +19,10 @@ function Home() {
   try {
     useEffect(() => {
       async function data() {
-        const response = await axios.get("http://localhost:3009/home2")
+        const response = await axios.get(`https://rocks-backend.onrender.com/home2/${name}`)
         console.log(response.data)
-        setCode([response.data.pop()])
-
+        setCode([response.data])
+        age === null ? setHideButton(false) : ""
       }
       data()
     }, [])
@@ -37,7 +42,22 @@ function Home() {
     console.log(year, bod)
   }
 
-  console.log(code)
+  useEffect(() => {
+    const age = localStorage.getItem("age")
+    if (age === null) {
+      setHideButton(false)
+    }
+    else {
+      age != null ? localStorage.setItem('isVerified', hideButton) : "";
+    }
+
+  }, [hideButton]);
+
+  const handlelogout = () => {
+    localStorage.removeItem("isLoggedIn")
+    return navigate("/login")
+
+  }
 
   return (
     <div>
@@ -55,15 +75,15 @@ function Home() {
                 </div>
               ))
             }
+            <button onClick={handlelogout}>Logout</button><br />
           </ul>
-
+          <br />
         </details>
-<br />
+        <br />
       </div>
       <h1>Welcome to  Download Page</h1>
       <div className="image-container">
 
-        <center>Download the game from the link below:</center>
         <center>
           <img className='gta' src="https://videos-rockstargames-com.akamaized.net/screencaps/10998/en_us/1280.jpg" />
           <br />
@@ -75,29 +95,38 @@ function Home() {
         <br />
       </div>
       {age === true ? age && <>
-      <div className='age'>
-        <center>
-        <br />
-        <label >BOD : </label>
-        <input type='date' onChange={(e) => setBod(e.target.value)} />  <br />
-       <br />
-        <label for="inputfo">AGE : </label>
-        <input className='inputfo' type='number' placeholder='Enter age' onChange={(e) => setyear(e.target.value)} /><br />
-        <br />
-        <button  onClick={(e) => {
-          handleadd(e)
-          if (year >= 18) {
-            setTimeout(() => {
-              window.location.href = "/home/download"
-            }, 2000);
-          }
-        }}>Add</button>
-        </center>
-      </div>
+        <div className='age'>
+          <center>
+            <br />
+            <label >BOD : </label>
+            <input type='date' onChange={(e) => setBod(e.target.value)} />  <br />
+            <br />
+            <label for="inputfo">AGE : </label>
+            <input className='inputfo' type='number' placeholder='Enter age' onChange={(e) => setyear(e.target.value)} /><br />
+            <br />
+            <button onClick={(e) => {
+              handleadd(e)
+              if (age === null) {
+                return setHideButton(false)
+              }
+              else if (year >= 18) {
+                setTimeout(() => {
+                  window.location.href = "/home/download"
+                }, 2000);
+              }
+              else {
+                localStorage.getItem("age") <= 18 ? setHideButton(true) : "";
+              }
+
+            }}>Add</button>
+          </center>
+        </div>
       </> : ""}
-      <div>
-        {setAge === false ? "" : <button className='download1' onClick={(e) => handlesubmit(e)} >download</button>}
-      </div>
+      {!hideButton &&
+        <div>
+          {setAge === false ? "" : <button className='download1' onClick={(e) => handlesubmit(e)} >download</button>}
+        </div>
+      }
     </div>
   )
 }

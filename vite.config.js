@@ -6,7 +6,7 @@ export default defineConfig({
   
   server: {
     allowedHosts: [
-      'election-rural-agree-component.trycloudflare.com'
+      'fought-draft-talking-colors.trycloudflare.com'
     ]},
   
 

@@ -1,25 +1,27 @@
-import React from 'react'
-import { Navigate } from 'react-router-dom'
-import { BrowserRouter,Route,Routes } from 'react-router-dom'
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Main from './Components/Main'
 import Login from './Components/Login'
 import Home from './Components/Home'
 import Register from './Components/register'
 import Download from './Components/Download'
-import Subscription from './Components/Subscription'
 import PrivateRoute from './PrivateRoute';
-// import axios from 'axios'
-// import Home from './Components/Home'
+import UpiSection from './Components/UpiSection'
+import UserPage from './Components/UserPage'
+import GamePage from './Components/GamePage'
 
-function App () {
 
-  const  isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-   isLoggedIn ? <Navigate to="/"/> : <Navigate to="/home" />
-    
+function App() {
+
+  const isLoggedIn = localStorage.getItem('isLoggedIn');
+  console.log(isLoggedIn)
+
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Main/>}></Route>
+
+        <Route path="/" element={<Main />} />
+
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route
@@ -42,10 +44,26 @@ function App () {
           path="/home/download/subscription"
           element={
             <PrivateRoute>
-              <Subscription />
+              <UpiSection />
             </PrivateRoute>
           }
         />
+        <Route
+          path="/home/download/subscription/user"
+          element={
+            <PrivateRoute>
+              <UserPage />
+            </PrivateRoute>
+          }
+        />
+      <Route
+        path="/home/download/subscription/user/game"
+        element={
+          <PrivateRoute>
+            <GamePage />
+          </PrivateRoute>
+        }
+      />
       </Routes>
     </BrowserRouter>
   );
